@@ -14,7 +14,7 @@ const HomePage = () => (
     
     <div className="relative w-full h-64 mb-4">
       <Image
-        src="/bee.jpeg"
+        src="/bee.jpg"
         alt="Project Banner"
         fill
         className="rounded-lg object-cover"

@@ -9,12 +9,12 @@ const HomePage = () => (
     
     <p className="mb-4">
       This website showcases our team&apos;s work on Bee Foraging Advisory System. We are a group
-      of four students working together to develop this system.
+      of four dedicated Software Engineering  students working together to  develop a system that combines advanced technology with ecological conservation.
     </p>
     
     <div className="relative w-full h-64 mb-4">
       <Image
-        src="/bee.jpeg"
+        src="/bee.jpg"
         alt="Project Banner"
         fill
         className="rounded-lg object-cover"

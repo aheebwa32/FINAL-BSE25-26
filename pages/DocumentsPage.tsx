@@ -38,8 +38,21 @@ const DocumentsPage = () => {
       title: "Data collection Report",
       date: "2025-02-01",
       type: "Google doc",
-      link: ""
+      link: "https://docs.google.com/document/d/1TecRGoPQvoT7qkVzYZ7770LJUys3h10jXBFEMO_q1GE/edit?usp=sharing"
+    },
+    {
+      title: "Software Design Document",
+      date: "2025-02-01",
+      type: "Google doc",
+      link: "https://docs.google.com/document/d/1UUPm_t2N7dobpb6AYGHYNZYdYdwX9jbHPdeN23q5EMI/edit?usp=sharing"
+    },
+    {
+      title: "Final Year Project Report",
+      date: "2025-02-01",
+      type: "Google doc",
+      link: "https://docs.google.com/document/d/1UUPm_t2N7dobpb6AYGHYNZYdYdwX9jbHPdeN23q5EMI/edit?usp=sharing"
     }
+
   ];
 
   return (

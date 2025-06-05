@@ -1,6 +1,10 @@
 'use client';
 import React from 'react';
-import { NavigationProps } from '../types/interfaces';
+
+interface NavigationProps {
+  currentPage: string;
+  setCurrentPage: (page: string) => void;
+}
 
 const Navigation = ({ currentPage, setCurrentPage }: NavigationProps) => (
   <nav className="bg-sky-950 p-4">

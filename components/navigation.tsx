@@ -30,3 +30,4 @@ const Navigation = ({ currentPage, setCurrentPage }: NavigationProps) => (
 );
 
 export default Navigation;
+

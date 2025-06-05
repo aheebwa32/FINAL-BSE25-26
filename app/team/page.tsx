@@ -12,7 +12,7 @@ export default function TeamPage() {
       bio: "I am a final year student specializing in app development , with a focus on developing systems with flutter.",
       profileImage: "/images/team/steven.jpg",
       socialLinks: {
-        github: "#",
+        github: "https://github.com/aheebwa32",
         linkedin: "#",
         email: "aheebwasteve3@gmail.com",
       },

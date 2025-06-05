@@ -1,20 +1,15 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Poppins } from "next/font/google"
-import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import Navigation from "@/components/navigation"
-import Footer from "@/components/footer"
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+import Header from '@/components/header'
+import Footer from '@/components/footer'
 
-const poppins = Poppins({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-})
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Beesight - Bee Foraging Advisory System",
-  description: "A final year project leveraging foraging methods to improve bee hive productivity",
-    generator: 'v0.dev'
+  title: 'BeeSight Development Blog - BSE25-26',
+  description: 'Follow our journey developing BeeSight: A Honey Productivity Guide and Monitor for Beekeepers in Uganda',
+  keywords: 'beekeeping, IoT, machine learning, computer vision, Uganda, agriculture, software development',
 }
 
 export default function RootLayout({
@@ -24,14 +19,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <div className="flex flex-col min-h-screen bg-honey-50">
-            <Navigation />
-            <main className="flex-grow">{children}</main>
-            <Footer />
-          </div>
-        </ThemeProvider>
+      <body className={inter.className}>
+        <div className="min-h-screen bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50">
+          <Header />
+          <main className="container mx-auto px-4 py-8">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   )

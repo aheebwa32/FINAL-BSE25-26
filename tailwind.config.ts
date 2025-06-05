@@ -35,7 +35,7 @@ export default {
           800: '#9a3412',
           900: '#7c2d12',
         },
-        // Existing shadcn/ui colors
+        // shadcn/ui compatible colors
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -75,7 +75,6 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      // Add BeeSight-specific utilities
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },

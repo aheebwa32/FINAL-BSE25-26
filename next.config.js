@@ -1,20 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  // Comment out these lines temporarily
+  // output: 'export',
+  // trailingSlash: true,
   images: {
-    domains: ['localhost'],
-    unoptimized: true, // For static export compatibility
+    unoptimized: true
   },
-  eslint: {
-    ignoreDuringBuilds: true,
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
   },
-  typescript: {
-    ignoreBuildErrors: false, // Set to false to catch TypeScript errors
-  },
-  // Remove any conflicting configuration
-  output: 'export', // For static export if needed
-  trailingSlash: true,
-  skipTrailingSlashRedirect: true,
 }
 
 module.exports = nextConfig

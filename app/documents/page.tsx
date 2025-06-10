@@ -1,4 +1,4 @@
-import { Calendar, FileText, ExternalLink } from "lucide-react"
+import { Calendar, FileText, ExternalLink } from "@/components/icons"
 import { Card, CardContent } from "@/components/ui/card"
 
 export default function DocumentsPage() {

@@ -3,6 +3,20 @@ export interface NavigationProps {
   setCurrentPage: (page: string) => void;
 }
 
+export interface TeamMemberProps {
+  id: number;
+  name: string;
+  role: string;
+  bio: string;
+  profileImage: string;
+  socialLinks: {
+    github: string;
+    linkedin: string;
+    email: string;
+  };
+  skills: string[];
+}
+
 export interface BlogPost {
   slug: string;
   title: string;

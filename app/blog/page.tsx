@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { Calendar, Clock, User, ArrowRight, Tag } from 'lucide-react'
 import { getBlogPosts } from '@/lib/blog'
+import { Calendar, Clock, User, ArrowRight, Tag } from '@/components/icons'
 
 export default async function BlogPage() {
   const posts = await getBlogPosts()
@@ -52,7 +52,7 @@ export default async function BlogPage() {
                   <article className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-amber-100">
                     {post.image && (
                       <div className="aspect-video bg-gradient-to-br from-amber-100 to-orange-100 flex items-center justify-center">
-                        <Tag className="text-amber-500" size={48} />
+                        <Tag className="text-amber-500 h-12 w-12" />
                       </div>
                     )}
                     <div className="p-8">
@@ -82,19 +82,19 @@ export default async function BlogPage() {
                       <div className="flex items-center justify-between text-sm text-gray-500">
                         <div className="flex items-center space-x-4">
                           <div className="flex items-center space-x-1">
-                            <User size={14} />
+                            <User className="h-4 w-4" />
                             <span>{post.author}</span>
                           </div>
                           <div className="flex items-center space-x-1">
-                            <Calendar size={14} />
+                            <Calendar className="h-4 w-4" />
                             <span>{new Date(post.date).toLocaleDateString()}</span>
                           </div>
                           <div className="flex items-center space-x-1">
-                            <Clock size={14} />
+                            <Clock className="h-4 w-4" />
                             <span>{post.readTime}</span>
                           </div>
                         </div>
-                        <ArrowRight className="text-amber-500 group-hover:translate-x-1 transition-transform" size={16} />
+                        <ArrowRight className="text-amber-500 group-hover:translate-x-1 transition-transform h-4 w-4" />
                       </div>
                     </div>
                   </article>
@@ -107,21 +107,20 @@ export default async function BlogPage() {
         {/* All Posts Grid */}
         <section>
           <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">All Posts</h2>
-          {posts.length === 0 ? (
-            <div className="text-center py-16">
-              <div className="bg-white rounded-2xl p-12 shadow-lg border border-amber-100 max-w-md mx-auto">
-                <Tag className="text-amber-400 mx-auto mb-4" size={64} />
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">No posts yet</h3>
-                <p className="text-gray-600 mb-6">Be the first to share your insights with the BeeSight community.</p>
-                <Link 
-                  href="/admin" 
-                  className="inline-flex items-center space-x-2 bg-amber-500 text-white px-6 py-3 rounded-lg hover:bg-amber-600 transition-colors"
-                >
-                  <span>Create First Post</span>
-                  <ArrowRight size={16} />
-                </Link>
+          {posts.length === 0 ? (              <div className="text-center py-16">
+                <div className="bg-white rounded-2xl p-12 shadow-lg border border-amber-100 max-w-md mx-auto">
+                  <Tag className="text-amber-400 mx-auto mb-4 h-16 w-16" />
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">No posts yet</h3>
+                  <p className="text-gray-600 mb-6">Be the first to share your insights with the BeeSight community.</p>
+                  <Link 
+                    href="/admin" 
+                    className="inline-flex items-center space-x-2 bg-amber-500 text-white px-6 py-3 rounded-lg hover:bg-amber-600 transition-colors"
+                  >
+                    <span>Create First Post</span>
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
               </div>
-            </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {posts.map((post, index) => (
@@ -129,7 +128,7 @@ export default async function BlogPage() {
                   <article className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-amber-100 h-full flex flex-col">
                     {post.image && (
                       <div className="aspect-video bg-gradient-to-br from-amber-100 to-orange-100 flex items-center justify-center">
-                        <Tag className="text-amber-500" size={32} />
+                        <Tag className="text-amber-500 h-8 w-8" />
                       </div>
                     )}
                     <div className="p-6 flex-1 flex flex-col">
@@ -156,11 +155,11 @@ export default async function BlogPage() {
                       <div className="flex items-center justify-between text-xs text-gray-500 pt-3 border-t border-gray-100">
                         <div className="flex items-center space-x-3">
                           <div className="flex items-center space-x-1">
-                            <User size={12} />
+                            <User className="h-3 w-3" />
                             <span>{post.author}</span>
                           </div>
                           <div className="flex items-center space-x-1">
-                            <Clock size={12} />
+                            <Clock className="h-3 w-3" />
                             <span>{post.readTime}</span>
                           </div>
                         </div>
@@ -184,7 +183,7 @@ export default async function BlogPage() {
               className="inline-flex items-center space-x-2 bg-white text-amber-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
             >
               <span>Write a Post</span>
-              <ArrowRight size={18} />
+              <ArrowRight className="h-5 w-5" />
             </Link>
           </div>
         </section>

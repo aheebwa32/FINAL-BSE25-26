@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Github, Linkedin, Mail } from "lucide-react"
+import { Github, Linkedin, Mail } from "@/components/icons"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
@@ -9,7 +9,7 @@ export default function TeamPage() {
       id: 1,
       name: "AHEEBWA STEVEN",
       role: "SOFTWARE ENGINEERING STUDENT",
-      bio: "I am a final year student specializing in app development , with a focus on developing systems with flutter.",
+      bio: "I am a final year student specializing in app development, with a focus on developing systems with flutter.",
       profileImage: "/images/team/steven.jpg",
       socialLinks: {
         github: "https://github.com/aheebwa32",
@@ -21,9 +21,8 @@ export default function TeamPage() {
     {
       id: 2,
       name: "KUKUNDA LYNN",
-
       role: "SOFTWARE ENGINEERING STUDENT",
-      bio: "Passionate about data science and machine learning . Experienced in developing algorithms for pattern recognition and data analysis.",
+      bio: "Passionate about data science and machine learning. Experienced in developing algorithms for pattern recognition and data analysis.",
       profileImage: "/images/team/lynn.jpg",
       socialLinks: {
         github: "#",
@@ -62,15 +61,15 @@ export default function TeamPage() {
 
   return (
     <>
-      <section className="bg-accent py-12">
-        <div className="container">
+      <section className="bg-gray-50 py-12">
+        <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">Our Team</h1>
-          <p className="text-lg text-muted-foreground">Meet the talented individuals behind the Beesight project</p>
+          <p className="text-lg text-gray-600">Meet the talented individuals behind the Beesight project</p>
         </div>
       </section>
 
       <section className="py-12">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="grid gap-8 md:grid-cols-2">
             {teamMembers.map((member) => (
               <Card key={member.id} className="overflow-hidden transition-all hover:shadow-md">
@@ -86,8 +85,8 @@ export default function TeamPage() {
                     </div>
                     <div className="flex flex-col p-6 md:w-2/3">
                       <h2 className="text-xl font-semibold">{member.name}</h2>
-                      <p className="text-sm text-primary font-medium mb-3">{member.role}</p>
-                      <p className="text-muted-foreground mb-4">{member.bio}</p>
+                      <p className="text-sm text-blue-600 font-medium mb-3">{member.role}</p>
+                      <p className="text-gray-600 mb-4">{member.bio}</p>
 
                       <div className="mt-2 mb-4">
                         <h3 className="text-sm font-semibold mb-2">Skills</h3>
@@ -95,7 +94,7 @@ export default function TeamPage() {
                           {member.skills.map((skill, index) => (
                             <span
                               key={index}
-                              className="inline-block bg-primary/10 text-secondary text-xs px-2 py-1 rounded-full"
+                              className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
                             >
                               {skill}
                             </span>
